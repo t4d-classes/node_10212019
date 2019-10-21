@@ -1,0 +1,18 @@
+Exercise 1
+
+URL Class Repo: https://github.com/t4d-classes/node_10212019
+
+1. Create a function named 'add'. The add function will receive three numeric parameters. Add all three parameters and return the value. Create a version of 'add' using a function declaration, function expression and an arrow function.
+
+2. Create a function which receives an object as an argument. The object will look like this:
+
+car = {
+  make: 'Ford',
+  model: 'Fusion',
+  year: 2017,
+  color: 'red',
+  price: 15000
+}
+
+In the function implementation, output the make, model and year to the console. Use destructuring to access the make, model and year properties.
+
