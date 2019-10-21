@@ -2,44 +2,43 @@
 
   'use strict';
 
-  // function getFullName({ firstName, lastName }) {
-  //   console.log(firstName + ' ' + lastName);
-  // }
+  const nums = [ 1, 2, 3, 4 ];
 
-  const getFullName = ({ firstName, lastName }) =>
-    ({ firstName: firstName, lastName: lastName });
+  // imperative
+  for (let x=0; x<nums.length; x++) {
+    console.log(nums[x]);
+  }
 
-  const p = {
-    firstName: 'Julie',
-    lastName: 'Smith',
-  };
+  Array.prototype.forEach = function(sideEffectFn) {
 
-  console.log(getFullName(p));
+    console.log('using the hacked forEach');
+
+    for (let x=0; x<this.length; x++) {
+      sideEffectFn(this[x]);
+    }
+  }
+
+  // declarative
+  nums.forEach(n => console.log(n));
+
+  const doubleNums = nums.map(function(n) {
+    return n * 2;
+  });
+
+  console.log(doubleNums);
+
+  const numsGTFour = doubleNums.filter(n => n > 4);
+
+  console.log(numsGTFour);
 
 
-  // function doIt(p1, p2, ...params) {
-  //   console.log(p1, p2, params);
-  // }
-
-  // [ p1, p2, ...params ] = ...[1,2,3,4,5,6,7]
-
-  // p1 = 1
-  // p2 = 2
-  // ...params = [3,4,5,6,7]
-  // doIt(...[1,2,3,4,5,6,7]);
-
-
-
-
-
-  // const doIt = function() {
-  //   console.log('this is cool');
+  // const person = {
+  //   firstName: 'Bob',
+  //   lastName: 'Smith',
+  //   getFullName() {
+  //     console.log(this.firstName + ' ' + this.lastName);
+  //   },
   // };
 
-  // const doIt = () => {
-  //   console.log('this is cool');
-  // };
-
-  // doIt();
 
 </script>

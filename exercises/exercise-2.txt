@@ -1,0 +1,27 @@
+Exercise 2
+
+URL Class Repo: https://github.com/t4d-classes/node_10212019
+
+Example Code: 
+
+1. Create a version of the map function named 'myMap'. The 'myMap' function will receive two arguments. First, will be an array, second will be a transformation function. Use a traditional for loop to implement the 'myMap' function.
+
+You will invoke 'myMap' using the following example code.
+
+const nums = [1, 2, 3, 4, 5];
+
+const doubleNums = myMap(nums, num => num * 2);
+
+The result (original array and the new array) should be outputed to the console, and it should like this:
+
+[1, 2, 3, 4, 5]
+[2, 4, 6, 8, 10]
+
+2. Create a new function named myFilter. The myFilter function should receive an array as the first argument, and a predicate function as the second argument. A predicate function is a function which returns true or false. The predicate function should be executed for each item in the array. If the predicate function returns true the item should be included in the new array, if it returns false it should not be included in the new array. Use a traditional for loop to implement the 'myFilter' function. To build the output array for the myFilter feel free to use the Array 'push' function.
+
+const nums = [1, 2, 3, 4, 5];
+
+const filteredNums = myFilter(nums, num => num > 3);
+
+Output fileredNums: [4, 5]
+

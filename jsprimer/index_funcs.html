@@ -1,0 +1,45 @@
+<script>
+
+  'use strict';
+
+  // function getFullName({ firstName, lastName }) {
+  //   console.log(firstName + ' ' + lastName);
+  // }
+
+  const getFullName = ({ firstName, lastName }) =>
+    ({ firstName: firstName, lastName: lastName });
+
+  const p = {
+    firstName: 'Julie',
+    lastName: 'Smith',
+  };
+
+  console.log(getFullName(p));
+
+
+  // function doIt(p1, p2, ...params) {
+  //   console.log(p1, p2, params);
+  // }
+
+  // [ p1, p2, ...params ] = ...[1,2,3,4,5,6,7]
+
+  // p1 = 1
+  // p2 = 2
+  // ...params = [3,4,5,6,7]
+  // doIt(...[1,2,3,4,5,6,7]);
+
+
+
+
+
+  // const doIt = function() {
+  //   console.log('this is cool');
+  // };
+
+  // const doIt = () => {
+  //   console.log('this is cool');
+  // };
+
+  // doIt();
+
+</script>
