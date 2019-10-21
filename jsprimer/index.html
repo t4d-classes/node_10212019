@@ -2,34 +2,63 @@
 
   'use strict';
 
-  const person = {
-    fn: 'Sally',
-    ln: 'Smith',
+  class Person {
+
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    getFullName() {
+      return this.firstName + ' ' + this.lastName;
+    }
+  }
+
+  class Student extends Person {
+
+    constructor(studentId, firstName, lastName) {
+      super(firstName, lastName);
+      this.studentId = studentId;
+    }
+
+    getRecordInfo() {
+      return `${this.studentId} ${this.lastName}, ${this.firstName}`;
+    }
+
+  }
+
+  const s = new Student(1, 'Bob', 'Smith');
+  console.log(s);
+  console.log(s.getFullName());
+  console.log(s.getRecordInfo());
+
+  function Person2(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  Person2.prototype.getFullName = function() {
+    return this.firstName + ' ' + this.lastName;
   };
 
-  Object.keys(person).forEach(propName => {
-    console.log(propName, person[propName]);
-  });
+  function Student2(studentId, firstName, lastName) {
+    this._super(firstName, lastName);
+    this.studentId = studentId;
+  }
 
-  // const person2 = Object.assign({}, person, { age: 42 });
+  Student2.prototype = Object.create(Person2.prototype);
+  Student2.prototype.constructor = Student2;
+  Student2.prototype._super = Person2;
 
-  const person2 = {
-    ...person,
-    age: 42,
+  Student2.prototype.getRecordInfo = function() {
+    return `${this.studentId} ${this.lastName}, ${this.firstName}`;
   };
 
-  console.log(person2);
+  const s2 = new Student2(2, 'Sally', 'Smith');
+  console.log(s2);
+  console.log(s2.getFullName());
+  console.log(s2.getRecordInfo());
 
-  // const person2 = Object.keys(person).reduce( (acc, propName) => {
-  //   acc[propName] = person[propName];
-  //   return acc;
-  // }, {});
-
-  // Object.keys(person).forEach(propName => {
-  //   person2[propName] = person[propName];
-  // });
-
-  // console.log(person2);
 
 
 </script>

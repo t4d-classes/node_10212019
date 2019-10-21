@@ -1,0 +1,47 @@
+<script>
+
+  /* Question 1 - Solution */
+
+  const cloneObject = (source) => {
+    return Object.keys(source).reduce( (target, propName) => {
+
+      // copy property from source to target
+      target[propName] = source[propName];
+
+      return target // will be the target param for the next source propName (key)
+    }, {} /* initial target object */);
+  };
+
+  const newObj = cloneObject({
+    fn: 'Bob', ln: 'Smith',
+  });
+
+  console.log(newObj.fn);
+
+  /* Question 2 - Solution */
+
+  const cloneObject2 = (source) => {
+    return Object.assign({} /* target */, source);
+  };
+
+  const newObj2 = cloneObject2({
+    fn: 'Bob', ln: 'Smith',
+  });
+
+  console.log(newObj2.fn);
+
+  const cloneObject3 = (source) => {
+    // the returned object literal is the new target, and the '...' (spread operator)
+    // copies the source into the new target object literal
+    return {
+      ...source
+    };
+  };
+
+  const newObj3 = cloneObject2({
+    fn: 'Bob', ln: 'Smith',
+  });
+
+  console.log(newObj3.fn);
+
+</script>

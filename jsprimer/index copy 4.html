@@ -1,0 +1,47 @@
+<script>
+
+  'use strict';
+
+  const parent = {
+    amt: 2000,
+    name: 'parent',
+    address: {
+      city: 'NY',
+      state: 'NY',
+    },
+  };
+
+  const child = Object.create(parent);
+  child.name = 'child';
+
+  console.log(child.amt);
+  console.log(child);
+
+  parent.amt = 2010;
+
+  console.log('child amt', child.amt);
+  console.log('parent amt', parent.amt);
+  console.log(child);
+
+  child.amt = 15;
+  console.log('child amt', child.amt);
+  console.log('parent amt', parent.amt);
+  console.log(child);
+
+  delete child.amt;
+  console.log('child amt', child.amt);
+  console.log('parent amt', parent.amt);
+  console.log(child);
+
+  console.log(child.address.city);
+  child.address = { city: 'Yorktown Heights' };
+
+  console.log(parent.address.city);
+  console.log(child);
+
+
+
+
+
+
+</script>

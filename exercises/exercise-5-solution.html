@@ -1,0 +1,54 @@
+<script>
+
+  /* Solution */
+
+  class Account {
+
+    constructor(acctNumber, acctName) {
+      this.acctNumber = acctNumber;
+      this.acctName = acctName;
+      this.balance = 0;
+      this.transactions = [];
+    }
+
+    deposit(amt) {
+      this.transactions.push(amt);
+      this.balance += amt;
+    }
+  }
+
+  class SavingsAccount extends Account {
+
+    constructor(acctNumber, acctName) {
+      super(acctNumber, acctName);
+      this.acctType = 'savings';
+    }
+  }
+
+  class CheckingAccount extends Account {
+
+    constructor(acctNumber, acctName) {
+      super(acctNumber, acctName);
+      this.acctType = 'checking';
+    }
+
+    withdraw(amt) {
+      this.transactions.push(amt);
+      this.balance -= amt;
+    }
+  }
+
+  const checking = new CheckingAccount('123', 'Bob');
+  checking.deposit(100)
+  checking.withdraw(50)
+  console.dir(checking.balance)
+  console.dir(checking.transactions)
+
+  const savings = new SavingsAccount('654', 'Jill');
+  savings.deposit(100)
+  console.dir(savings.balance)
+  console.dir(savings.transactions)
+
+
+
+</script>

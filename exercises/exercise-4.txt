@@ -12,4 +12,6 @@ console.log(newObj.fn);
 
 2. Make a copy of the above function and name it 'cloneObject2'. Re-implement the function using Object.assign. Then create a third version of the function named 'cloneObject3' and implement it with the spread operator.
 
+3. Bonus: Create a version of cloneObject which does a deep copy.
+
 

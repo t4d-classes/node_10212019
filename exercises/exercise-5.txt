@@ -1,0 +1,35 @@
+Lab Exercise:
+
+URL Class Repo: https://github.com/t4d-classes/node_10212019
+
+1. Create an Account Class, on the class set the following properties with constructor parameters:
+
+Account Number
+Account Owner
+
+2. Within the constructor set the Account Balance to zero and the collection of Transactions to an empty array .
+
+3. Add a function to deposit money, the function should accept the amount to be deposited. Be sure to update the Account Balance and Transactions list.
+
+4. Create a Savings Account class which inherits from the Account Class
+
+In the constructor set the Account Type to 'Savings'
+
+5. Create a Checking Account class which inherits from the Account Class
+
+In the constructor set the Account Type to 'Checking'
+
+Add a function to withdraw money, the function should accept the amount to withdraw
+
+5. Use the following code to test the classes you implemented 
+
+const checking = new CheckingAccount('123', 'Bob');
+checking.deposit(100)
+checking.withdraw(50)
+console.dir(checking.balance)
+console.dir(checking.transactions)
+
+const savings = new SavingsAccount('654', 'Jill');
+savings.deposit(100)
+console.dir(savings.balance)
+console.dir(savings.transactions)

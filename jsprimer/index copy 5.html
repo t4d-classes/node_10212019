@@ -1,0 +1,25 @@
+<script>
+
+  'use strict';
+
+  function outer() {
+
+    console.log(this);
+
+    // const that = this;
+
+    const inner = () => {
+      console.log(this);
+    }
+
+    inner();
+  }
+
+  const o = {
+    id: 2,
+    outer,
+  };
+
+  o.outer();
+
+</script>

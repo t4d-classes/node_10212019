@@ -1,0 +1,35 @@
+<script>
+
+  'use strict';
+
+  const person = {
+    fn: 'Sally',
+    ln: 'Smith',
+  };
+
+  Object.keys(person).forEach(propName => {
+    console.log(propName, person[propName]);
+  });
+
+  // const person2 = Object.assign({}, person, { age: 42 });
+
+  const person2 = {
+    ...person,
+    age: 42,
+  };
+
+  console.log(person2);
+
+  // const person2 = Object.keys(person).reduce( (acc, propName) => {
+  //   acc[propName] = person[propName];
+  //   return acc;
+  // }, {});
+
+  // Object.keys(person).forEach(propName => {
+  //   person2[propName] = person[propName];
+  // });
+
+  // console.log(person2);
+
+
+</script>
