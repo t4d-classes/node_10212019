@@ -1,0 +1,37 @@
+<script>
+
+  /* Question 1 - Solution */
+
+  function add(a,b,c) {
+    return a + b + c;
+  }
+
+  console.log( add(1,2,3) );
+
+  const add2 = function(a,b,c) {
+    return a + b + c;
+  };
+
+  console.log( add2(1,2,3) );
+
+  const add3 = (a,b,c) => {
+    return a + b + c;
+  };
+
+  console.log( add3(1,2,3) );
+
+  /* Question 2 - Solution */
+
+  function outputCar({ make, model, year }) {
+    console.log(make, model, year);
+  }
+
+  outputCar({
+    make: 'Ford',
+    model: 'Fusion',
+    year: 2017,
+    color: 'red',
+    price: 15000
+  });
+
+</script>

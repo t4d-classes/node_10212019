@@ -1,0 +1,42 @@
+<script>
+
+  /* Question 1 - Solution */
+
+  const myMap = (items, transformFn) => {
+
+    const mappedItems = [];
+
+    for (let x = 0; x < items.length; x++) {
+      mappedItems.push(transformFn(items[x]));
+    }
+
+    return mappedItems;
+  };
+
+  const nums = [ 1,2,3,4,5 ];
+  const doubleNums = myMap(nums, num => num * 2);
+
+  console.log(nums);
+  console.log(doubleNums);
+
+  /* Question 2 - Solution */
+
+  const myFilter = (items, predicateFn) => {
+
+    const filteredItems = [];
+
+    for (let x = 0; x < items.length; x++) {
+      if (predicateFn(items[x])) {
+        filteredItems.push(items[x]);
+      }
+    }
+
+    return filteredItems;
+  };
+
+  const filteredNums = myFilter(nums, num => num > 3);
+
+  console.log(nums);
+  console.log(filteredNums);
+
+</script>
