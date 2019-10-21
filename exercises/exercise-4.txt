@@ -1,0 +1,15 @@
+Exercise 4
+
+URL Class Repo: https://github.com/t4d-classes/node_10212019
+
+1. Write a function named 'cloneObject' which receives an object parameter, creates a new object and copies the properties from the original object to the new object. Return the new object. Implement the function using reflection (Object.keys) and array reduce function.
+
+const newObj = cloneObject({
+  fn: 'Bob', ln: 'Smith',
+});
+
+console.log(newObj.fn);
+
+2. Make a copy of the above function and name it 'cloneObject2'. Re-implement the function using Object.assign. Then create a third version of the function named 'cloneObject3' and implement it with the spread operator.
+
+

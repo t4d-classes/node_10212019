@@ -2,16 +2,34 @@
 
   'use strict';
 
-  const nums = [ 1,2,3,4,5 ];
+  const person = {
+    fn: 'Sally',
+    ln: 'Smith',
+  };
 
-  const sum = nums.reduce( (acc, num) => {
+  Object.keys(person).forEach(propName => {
+    console.log(propName, person[propName]);
+  });
 
-    console.log('acc:', acc, 'num:', num);
+  // const person2 = Object.assign({}, person, { age: 42 });
 
-    return acc + num;
-  }, 0);
+  const person2 = {
+    ...person,
+    age: 42,
+  };
 
-  console.log(sum);
+  console.log(person2);
+
+  // const person2 = Object.keys(person).reduce( (acc, propName) => {
+  //   acc[propName] = person[propName];
+  //   return acc;
+  // }, {});
+
+  // Object.keys(person).forEach(propName => {
+  //   person2[propName] = person[propName];
+  // });
+
+  // console.log(person2);
 
 
 </script>

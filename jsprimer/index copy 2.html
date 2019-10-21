@@ -1,0 +1,62 @@
+<script>
+
+  'use strict';
+
+  const person = {
+    firstName: 'Sally',
+    lastName: 'Thomas',
+    age: 45,
+    address: { 
+      street: '123 Oak Lane',
+      city: 'Rutherford',
+      state: 'NJ',
+      zipCode: '07070',
+    },
+    getCity() {
+      return this.address.city;
+    },
+
+    // 'hairColor': 'brown',
+    // 'here is any string': 'here is a value',
+  };
+
+  // const person2 = {
+  //   firstName: 'Bob',
+  //   address: {
+  //     city: 'New York',
+  //   },
+  //   getCity: person.getCity,
+  // };
+
+  // person2.address.city = 'New York';
+
+  // console.log(person.getCity()); // Rutherford
+  // console.log(person2.getCity()); // Rutherford
+
+  // console.log(person2.getCity === person.getCity);
+
+  // console.log(person);
+  // console.log(person.firstName);
+  // console.log(person['lastName']);
+  // console.log(person['here is any string']);
+
+  // const propName = 'hair' + 'Color';
+  // console.log(person[propName]);
+  // console.log(person['hair' + 'Color']);
+
+  // person.title = 'CEO';
+  // console.log(person);
+
+  // delete person.age;
+  // console.log(person);
+
+  // const doIt = () => {
+  //   console.log('did it');
+  // };
+
+  // doIt.hereIsANewProp = 'yay this is fun!';
+
+  // console.dir(doIt);
+
+
+</script>
