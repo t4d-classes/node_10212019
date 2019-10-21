@@ -1,0 +1,44 @@
+<script>
+
+  'use strict';
+
+  const nums = [ 1, 2, 3, 4 ];
+
+  // imperative
+  for (let x=0; x<nums.length; x++) {
+    console.log(nums[x]);
+  }
+
+  Array.prototype.forEach = function(sideEffectFn) {
+
+    console.log('using the hacked forEach');
+
+    for (let x=0; x<this.length; x++) {
+      sideEffectFn(this[x]);
+    }
+  }
+
+  // declarative
+  nums.forEach(n => console.log(n));
+
+  const doubleNums = nums.map(function(n) {
+    return n * 2;
+  });
+
+  console.log(doubleNums);
+
+  const numsGTFour = doubleNums.filter(n => n > 4);
+
+  console.log(numsGTFour);
+
+
+  // const person = {
+  //   firstName: 'Bob',
+  //   lastName: 'Smith',
+  //   getFullName() {
+  //     console.log(this.firstName + ' ' + this.lastName);
+  //   },
+  // };
+
+
+</script>

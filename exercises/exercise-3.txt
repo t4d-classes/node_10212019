@@ -1,0 +1,19 @@
+Exercise 3
+
+URL Class Repo: https://github.com/t4d-classes/node_10212019
+
+1. Take the following array of strings and use the reduce function to produce a single string of the array values concatenated together.
+
+const parts = [ 'this', 'is', 'fun' ];
+
+// use the built-in array reduce function to produce and display in the console the following output:
+
+'thisisfun'
+
+2. Re-implement the myMap function using the array built-in reduce function instead of the for-loop structure.
+
+3. Re-implement the myFilter function using the array built-in reduce function instead of the for-loop structure.
+
+Bonus:
+
+4. Create a new function named myReduce which behaves like the built-in array reduce function without using the reduce function. Implement the function using a for-loop structure. The myReduce function should take an array as the first argument, the transformation function as the second argument, and the initial value of the accumulator as the third argument. 
