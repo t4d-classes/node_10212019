@@ -1,0 +1,19 @@
+Exercise 1
+
+https://github.com/t4d-classes/node_10212019
+
+Using the example code below in `simple-concat.js', write a program which reads two text files, 'a.txt' and 'b.txt', concats them together, and writes a new text file named 'c.txt'. You may modify the 'simple-concat.js' file or create a new file. To run the program, use the following command from the terminal:
+
+node ./simple-concat.js
+
+If you use another file name, then replace `simple-concat.js` with the name of the file you choose.
+
+You will create several versions of this program:
+
+a. A version which uses callbacks.
+
+b. A version which uses promises. Do not use promisify.
+
+c. A version which uses async/await.
+
+Bonus: d. A version which uses promisify and async/await.

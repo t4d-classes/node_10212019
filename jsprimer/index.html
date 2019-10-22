@@ -1,5 +1,6 @@
 <script>
 
+
   'use strict';
 
   // setTimeout(() => {
@@ -12,21 +13,41 @@
   //     }, 1000);
   // }, 2000);
 
-  const allDone = () => {
-    console.log('all done');
-  };
+  // const allDone = () => {
+  //   console.log('all done');
+  // };
 
-  setTimeout(() => {
-    console.log('a');
-  }, 1000); 
+  // let counter = 0;
 
-  setTimeout(() => {
-    console.log('b');
-  }, 500); 
+  // counter++;
+  // setTimeout(() => {
+  //   console.log('a');
+  //   counter--;
+  //   if (counter === 0) {
+  //     allDone();
+  //   }
+  // }, 1000); 
 
-  setTimeout(() => {
-    console.log('c');
-  }, 2000);
+  // counter++;
+  // setTimeout(() => {
+  //   console.log('b');
+  //   counter--;
+  //   if (counter === 0) {
+  //     allDone();
+  //   }
+  // }, 500); 
+
+  // counter++;
+  // setTimeout(() => {
+  //   console.log('c');
+  //   counter--;
+  //   if (counter === 0) {
+  //     allDone();
+  //   }
+  // }, 2000);
+
+  // https://github.com/t4d-classes/node_10212019
+
 
   // Rules
   // Run the allDone function after all three setTimeouts have completed
@@ -36,6 +57,104 @@
   // 4. No promises
   // 5. You can make just about any other change
   // 6. No additional setTimeouts can be used
+
+  // class Promise {
+
+  //   constructor(fn) {
+
+  //     this._resolveFns = [];
+
+  //     const resolve = (data) => {
+  //       this._resolveFns.forEach(fn => fn(data));
+  //     };
+
+  //     const reject = () => {};
+  //     fn(resolve, reject);
+  //   }
+
+  //   then(fn) {
+  //     this._resolveFns.push(fn);
+  //   }
+  // }
+
+  const proposeMarriage = () => {
+    console.log('propose marriage');
+    return new Promise(function youngLady(resolve, reject) {
+      setTimeout(() => {
+        console.log('2. she says yes to the dress...');
+        resolve('3. she is madly in love...');
+      }, 2000);
+    });
+  };
+
+  const findClothes = (result) => {
+    console.log(result);
+    console.log('find some wedding clothes...');
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('found some clothes...');
+      }, 2000);
+    });
+  };
+
+  const findALocation = (result) => {
+    console.log(result);
+    console.log('find a location...');
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('found a location...');
+      }, 2000);
+    });    
+  };
+
+  const tieTheKnot = async () => {
+    try {
+
+      let result = await proposeMarriage();
+
+      while(1 > 0) {
+        
+      }
+      result = await findClothes(result);
+      result = await findALocation(result);
+      return result;
+
+    } catch(err) {
+      console.log(err);
+    }
+  };
+
+  tieTheKnot().then(result => console.log(result));
+
+  // proposeMarriage()
+  //   .then(result => findClothes(result))
+  //   .then(result => findALocation(result))
+  //   .then(result => console.log(result))
+  //   .catch(err => console.log(err));
+
+  // const p = new Promise(resolve => {
+  //   setTimeout(() => {
+  //     resolve('a')
+  //   }, 2000);
+  // });
+
+  // const p1 = new Promise(resolve => setTimeout(() => resolve('a'), 2000));
+  // const p2 = new Promise(resolve => setTimeout(() => resolve('b'), 4000));
+  // const p3 = new Promise((resolve, reject) => setTimeout(() => reject('c'), 6000));
+  // const p4 = new Promise(resolve => setTimeout(() => resolve('d'), 8000));
+
+  // p1.then(result => console.log(result));
+  // p2.then(result => console.log(result));
+  // p3.then(result => console.log(result)).catch(result => console.log('rejected', result));
+  // p4.then(result => console.log(result));
+
+  // Promise.all([ p1, p2, p3, p4 ]).then(results => {
+  //   console.log('all done');
+  //   console.log(results);
+  // }).catch(result => {
+  //   console.log(result);
+  //   console.log('one failed');
+  // });
 
 
 </script>
