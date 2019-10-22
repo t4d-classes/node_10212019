@@ -1,0 +1,19 @@
+{
+  "name": "demo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "rest": "json-server --port 3010 db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "3.21.2",
+    "lodash": "~4.2.1"
+  },
+  "devDependencies": {
+    "json-server": "0.15.1"
+  }
+}
