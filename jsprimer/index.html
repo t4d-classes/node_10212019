@@ -2,63 +2,40 @@
 
   'use strict';
 
-  class Person {
+  // setTimeout(() => {
+  //     console.log('a');
+  //     setTimeout(() => {
+  //         console.log('b');
+  //         setTimeout(() => {
+  //             console.log('c');
+  //         }, 500);
+  //     }, 1000);
+  // }, 2000);
 
-    constructor(firstName, lastName) {
-      this.firstName = firstName;
-      this.lastName = lastName;
-    }
-
-    getFullName() {
-      return this.firstName + ' ' + this.lastName;
-    }
-  }
-
-  class Student extends Person {
-
-    constructor(studentId, firstName, lastName) {
-      super(firstName, lastName);
-      this.studentId = studentId;
-    }
-
-    getRecordInfo() {
-      return `${this.studentId} ${this.lastName}, ${this.firstName}`;
-    }
-
-  }
-
-  const s = new Student(1, 'Bob', 'Smith');
-  console.log(s);
-  console.log(s.getFullName());
-  console.log(s.getRecordInfo());
-
-  function Person2(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-
-  Person2.prototype.getFullName = function() {
-    return this.firstName + ' ' + this.lastName;
+  const allDone = () => {
+    console.log('all done');
   };
 
-  function Student2(studentId, firstName, lastName) {
-    this._super(firstName, lastName);
-    this.studentId = studentId;
-  }
+  setTimeout(() => {
+    console.log('a');
+  }, 1000); 
 
-  Student2.prototype = Object.create(Person2.prototype);
-  Student2.prototype.constructor = Student2;
-  Student2.prototype._super = Person2;
+  setTimeout(() => {
+    console.log('b');
+  }, 500); 
 
-  Student2.prototype.getRecordInfo = function() {
-    return `${this.studentId} ${this.lastName}, ${this.firstName}`;
-  };
+  setTimeout(() => {
+    console.log('c');
+  }, 2000);
 
-  const s2 = new Student2(2, 'Sally', 'Smith');
-  console.log(s2);
-  console.log(s2.getFullName());
-  console.log(s2.getRecordInfo());
-
+  // Rules
+  // Run the allDone function after all three setTimeouts have completed
+  // 1. You may not wrap the allDone in a setTimeout with higher delay value
+  // 2. You may not change the delay values in the setTimeouts
+  // 3. You call all three setTimeouts in the same task
+  // 4. No promises
+  // 5. You can make just about any other change
+  // 6. No additional setTimeouts can be used
 
 
 </script>

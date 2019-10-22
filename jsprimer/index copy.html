@@ -1,0 +1,64 @@
+<script>
+
+  'use strict';
+
+  class Person {
+
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    getFullName() {
+      return this.firstName + ' ' + this.lastName;
+    }
+  }
+
+  class Student extends Person {
+
+    constructor(studentId, firstName, lastName) {
+      super(firstName, lastName);
+      this.studentId = studentId;
+    }
+
+    getRecordInfo() {
+      return `${this.studentId} ${this.lastName}, ${this.firstName}`;
+    }
+
+  }
+
+  const s = new Student(1, 'Bob', 'Smith');
+  console.log(s);
+  console.log(s.getFullName());
+  console.log(s.getRecordInfo());
+
+  function Person2(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  Person2.prototype.getFullName = function() {
+    return this.firstName + ' ' + this.lastName;
+  };
+
+  function Student2(studentId, firstName, lastName) {
+    this._super(firstName, lastName);
+    this.studentId = studentId;
+  }
+
+  Student2.prototype = Object.create(Person2.prototype);
+  Student2.prototype.constructor = Student2;
+  Student2.prototype._super = Person2;
+
+  Student2.prototype.getRecordInfo = function() {
+    return `${this.studentId} ${this.lastName}, ${this.firstName}`;
+  };
+
+  const s2 = new Student2(2, 'Sally', 'Smith');
+  console.log(s2);
+  console.log(s2.getFullName());
+  console.log(s2.getRecordInfo());
+
+
+
+</script>
