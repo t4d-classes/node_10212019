@@ -1,0 +1,19 @@
+{
+  "name": "exercise-2-solution",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "rest": "json-server --port 3010 db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "3.0.2",
+    "superagent": "5.1.0"
+  },
+  "devDependencies": {
+    "json-server": "0.15.1"
+  }
+}

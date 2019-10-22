@@ -16,4 +16,4 @@ b. A version which uses promises. Do not use promisify.
 
 c. A version which uses async/await.
 
-d. A version which uses promisify and async/await.
+Bonus: d. A version which uses promisify and async/await.

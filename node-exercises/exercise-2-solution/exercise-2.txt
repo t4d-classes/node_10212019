@@ -1,0 +1,34 @@
+Exercise 2
+
+https://github.com/t4d-classes/node_10212019
+
+1. Create a new Node.js project. Remember, this is done by creating a 'package.json' file. Copy the 'cars.json' and 'db.json' file to the folder where the 'package.json' file is located. 
+
+2. Install the Commander and SuperAgent packages found here:
+
+https://www.npmjs.com/package/commander
+https://www.npmjs.com/package/superagent
+
+Install these two packages are normal dependencies.
+
+3. Install the JSON Server package found here: https://github.com/typicode/json-server
+
+Install JSON Server as a development dependency.
+
+4. Add a script entry named 'rest' and configure it to run the following command:
+
+'json-server --port 3010 ./db.json'
+
+5. Write a Node.js program in a file named 'upload-cars.js' which does the following:
+
+a. Accepts a command line argument named 'source' which is path to a JSON file containing car data.
+
+b. Uses the value of the command line argument to open and read the car data file.
+
+c. POSTs the car data to the JSON server REST service. Each car should be posted individually, but all POSTs should be initiated in the same task. Use the promise-based approach. You may also use async/await if you would like.
+
+d. The command should be executed like this:
+
+node ./upload-cars.js --source cars.json
+
+6. View the results of the program by browsing to 'http://localhost:3010/cars'.
