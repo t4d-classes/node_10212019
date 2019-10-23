@@ -1,0 +1,14 @@
+{
+  "name": "javascript-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "web": "node index.js",
+    "web-custom-port": "PORT=8888 node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}

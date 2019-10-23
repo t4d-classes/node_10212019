@@ -1,0 +1,28 @@
+{
+  "name": "rest-api-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "1.17.0",
+    "@types/cors": "2.8.5",
+    "@types/express": "4.17.0",
+    "@types/lowdb": "1.0.9",
+    "@types/node": "12.6.9",
+    "ts-node": "^8.3.0",
+    "tslint": "5.18.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "lowdb": "1.0.0"
+  }
+}

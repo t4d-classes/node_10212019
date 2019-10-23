@@ -1,0 +1,37 @@
+download Mongo
+
+https://www.mongodb.com/download-center/community
+
+start Mongo
+
+./mongod --dbpath ./data/db
+
+open Robo 3T, connect to local database
+
+create a database named cartool
+
+create a collection named cars
+
+add two car documents
+
+{
+  "make": "Ford",
+  "model": "Fusion Hybrid",
+  "year": 2018,
+  "color": "black",
+  "price": 25000
+}
+
+{
+  "make": "Tesla",
+  "model": "S",
+  "year": 2018,
+  "color": "red",
+  "price": 125000
+}
+
+start the server
+
+npm start
+
+browse to: http://localhost:3010/cars

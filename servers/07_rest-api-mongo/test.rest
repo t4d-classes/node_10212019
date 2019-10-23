@@ -1,0 +1,36 @@
+GET http://localhost:3010/cars HTTP/1.1
+
+###
+
+GET http://localhost:3010/cars/5d6935f2f244fa17f07af6c8 HTTP/1.1
+
+###
+
+POST http://localhost:3010/cars HTTP/1.1
+Content-Type: application/json
+
+{
+  "make": "Toyota",
+  "model": "Sienna",
+  "year": 2019,
+  "color": "light blue",
+  "price": 45000
+}
+
+###
+
+PUT http://localhost:3010/cars/5d69a2a3aacf8919a6c47948 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "5d69a2a3aacf8919a6c47948",
+  "make": "Toyota",
+  "model": "Sienna",
+  "year": 2019,
+  "color": "blue",
+  "price": 45000
+}
+
+###
+
+DELETE http://localhost:3010/cars/5d6935f2f244fa17f07af6c8 HTTP/1.1

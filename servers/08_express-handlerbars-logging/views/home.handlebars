@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+
+<ul>
+  {{#each colors}}
+  <li><form method="POST" action="/remove-color/{{this}}">
+    {{this}} <button>X</button>
+  </form></li>
+  {{/each}}
+</ul>
+
+<form action="/append-color" method="post">
+  <div>
+    <label>Color:</label>
+    <input type="text" id="color-input" name="color" value="">
+  </div>
+  <button>Add Color</button>
+</form>

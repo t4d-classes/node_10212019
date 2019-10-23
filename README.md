@@ -8,7 +8,7 @@ Eric Greene [LinkedIn](https://www.linkedin.com/in/erict4dio/) [Web Site](http:/
 
 Class:
 
-- Monnday - Wednesday, 9am to 5pm EDT
+- Monday - Wednesday, 9am to 5pm EDT
 
 Breaks:
 
