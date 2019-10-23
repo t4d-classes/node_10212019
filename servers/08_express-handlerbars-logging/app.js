@@ -37,13 +37,14 @@ const createAppServer = () => {
   });
 
   app.post('/append-color', (req, res) => {
-    colors.appendColor(req.body.color);
-    res.redirect('/');
+    colors.appendColor(req.body.color).then(() => {
+      res.redirect('/');
+    });
   });
 
   app.get('/', (req, res) => {
     res.render('home', {
-      title: 'Color Tool',
+      title: 'Color Tool!',
       colors: colors.allColors()
     });
   });

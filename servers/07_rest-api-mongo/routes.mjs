@@ -1,4 +1,5 @@
 import express from 'express';
+import { callbackify } from 'util';
 
 export const createAPI = (resourceName, Model) => {
 

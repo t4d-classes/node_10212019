@@ -31,6 +31,7 @@ describe('app', () => {
       './colors': class ColorsMock {
         appendColor(color) {
           expect(color).to.be.string('yellow');
+          return Promise.resolve();
         }
       }
     });

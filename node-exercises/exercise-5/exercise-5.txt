@@ -1,0 +1,22 @@
+Exercise 5
+
+https://github.com/t4d-classes/node_10212019
+
+1. Create a new Express pplication. Use a JSON file to configure the port number, file name and path of the data file (data.json) and the file name and path of a log file (history.log).
+
+2. Create a REST endpoint for adding a new car resource. For the car capture the make, model, year, color and price.
+
+3. When the REST endpoint is called, save the car to a file named data.json. Log the verb, url, status code of each request to the Express application to a file named history.log.
+
+4. Add a new REST endpoint which returns all cars from the data.json file.
+
+5. Create a second node script which uses super agent to add two new cars and then returns all of the cars (be sure the added cars are included in the returned collection).
+
+6. Write unit tests to test the following:
+
+Making a REST endpoint request to add a car
+Making a REST endpoint request to get all cars
+Adding a car to the data.json file
+Getting all cars from the data.json file
+
+7. Run the Express application and second script and ensure all works. Run the unit tests and ensure they work.

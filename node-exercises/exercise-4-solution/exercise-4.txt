@@ -1,0 +1,19 @@
+Exercise 4
+
+https://github.com/t4d-classes/node_10212019
+
+1. Using the Mocha, Chai Expect Assertions and Mock-FS, write a unit tests for the following scenarios:
+
+Help for Mocha: https://mochajs.org/
+
+a. Create a new module named myMath.js. In the module implement functions for adding and subtracting numbers. Each function accepts two parameters which are then added or subtracted, and then the function returns the result. Write a unit test to test both the 'add' and 'subtract' functions.
+
+Help for Chai Expect API: https://www.chaijs.com/api/bdd/
+
+b. Write a unit test for the file copy functions from exercise 3. You will need to wrap the file copy code in a function.
+
+Help for Mock-FS: https://github.com/tschaub/mock-fs
+
+c. Run the unit tests with both the NPX command and an NPM script command.
+
+
