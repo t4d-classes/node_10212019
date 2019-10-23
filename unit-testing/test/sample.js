@@ -2,7 +2,6 @@ const { expect } = require('chai');
 const mockFs = require('mock-fs');
 const { getContent } = require('../content');
 
-
 describe('sample tests', () => {
 
   beforeEach(() => {
