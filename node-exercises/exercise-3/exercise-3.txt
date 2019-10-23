@@ -1,0 +1,18 @@
+Exercise 3
+
+https://github.com/t4d-classes/node_10212019
+
+1. Create a new program which copies a file. The name of the source and target files should be specified as command line arguments.
+
+2. To perform the copy do not use 'readFile', 'writeFile' or 'copyFile', use 'readStream' and 'writeStream'. Use the structure provided and described by the index.js file. This structure will result in a file-copy.js file, with the command line arguments passed into the fileCopy function. The fileCopy function should not use the commander module directly.
+
+3. The fileCopy function should return a promise. The promise is resolved when the write stream is closed.
+
+https://nodejs.org/dist/latest-v12.x/docs/api/stream.html#stream_event_close
+
+4. Once the file copy is complete write a message to the console indicating that the file copy is complete.
+
+5. The program should execute with the following command:
+
+node ./file-copy.js --source input.txt --target output.txt
+
