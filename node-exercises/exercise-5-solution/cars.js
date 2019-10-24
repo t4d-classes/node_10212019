@@ -35,7 +35,7 @@ module.exports.CarsData = class {
       const newCars = cars.concat(newCar);
 
       return new Promise((resolve, reject) => {
-        fs.writeFile(this._carDataFileName, JSON.stringify({ cars: newCars }), 'utf8', (err) => {
+        fs.writeFile(this._carDataFileName, JSON.stringify({ cars: newCars }, null, 2), 'utf8', (err) => {
   
           if (err) {
             reject(err);
